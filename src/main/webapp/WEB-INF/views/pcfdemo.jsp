@@ -116,7 +116,7 @@
         </c:if>
 		<c:choose>
 			<c:when test="${rabbitURI != null}">
-				<p>Old Data being streamed from RabbitMQ</p>				
+				<p>New1 Data being streamed from RabbitMQ</p>				
 			</c:when>
 			<c:otherwise>
 				<p><b>No RabbitMQ service bound - streaming is not active</b> </p>	

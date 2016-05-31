@@ -1,0 +1,30 @@
+---
+resources:
+  - name: source-code
+    type: git
+    source:
+      uri: https://github.com/mnenad/PCF-demo.git
+      branch: master
+
+  - name: cf
+    type: cf
+    source:
+      api: api.run.pivotal.io
+      username: momcilovicnenad@yahoo.com
+      password: Am21012011
+      organization: Nenad
+      space: dev-man
+      skip_cert_check: true
+
+jobs:
+  - name: build
+    public: true
+    plan:
+      - get: source-code
+        trigger: true
+      - task: build
+        file: source-code/ci/tasks/build.yml
+      - put: cf
+        params:
+          manifest: source-code/manifest.yml
+          path: build-output/pcfdemo.war

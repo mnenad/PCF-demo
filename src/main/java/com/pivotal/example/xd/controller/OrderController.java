@@ -178,7 +178,7 @@ public class OrderController {
     public  void encrypt() throws Exception {
 	    Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());        
 	    byte[] input = " www.java2s.com ".getBytes();
-	    byte[] keyBytes = OrderController.cryptKey.getBytes();
+	    byte[] keyBytes = cryptKey.getBytes();
 	  
 	    SecretKeySpec key = new SecretKeySpec(keyBytes, "AES");
 	    Cipher cipher = Cipher.getInstance("AES/ECB/NoPadding", "BC");

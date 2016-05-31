@@ -10,8 +10,8 @@ resources:
     type: cf
     source:
       api: api.run.pivotal.io
-      username: <enter username here>
-      password: <enter password here>
+      username: momcilovicnenad@yahoo.com
+      password: pivotal
       organization: Nenad
       space: dev-man
       skip_cert_check: true

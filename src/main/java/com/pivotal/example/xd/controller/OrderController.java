@@ -163,13 +163,7 @@ public class OrderController {
     	return heatMap;
 
     }
-    @RequestMapping(value="/load")
-    public void load(){
-    	
-    	
-    }
-    
-    
+      
     @PreDestroy
     public void shutdownThread(){
     	
